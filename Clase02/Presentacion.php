@@ -115,5 +115,39 @@ $nuevoObjeto = new NombreClase();
     $persona1->Mostrar();
 
 
+    class EntidadPersona{
+
+        private $nombre;
+        private $edad;
+
+        function __construct($nombre , $edad)
+        {
+            $this->$nombre = $nombre;
+            $this->$edad = $edad;
+        }
+
+        private function GetSaludar()
+        {
+            //encapsulamiento en poo en php
+        }
+
+
+
+
+        public function Saludar()
+        {
+            echo "HOla soy ";
+        }
+
+
+
+    }
+
+
+
+
+
+
+
 
 ?>
