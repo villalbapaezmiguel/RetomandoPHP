@@ -1,13 +1,13 @@
 <?php
-include "Usuario.php";
-include "Empleado.php";
+//este es el main
+require_once "Usuario.php";
+require_once "Empleado.php";
 
+//$nombreUsuario , $contrasenia, $salario , $legajo , $id
 
+$empleado = new Empleado("Miguel",12345, 2500000, 7736,179);
 
-//tengo un problema , tengo tres archivos , el archivo principal que es el main.php , el archivo Usuario.php que vendria a ser la clase padre y el archivo hijo Empleado.php .
-//me estaria generando un problema al llamar al archivo Usuario.php en el archivo Empleado.php
-
-
+$empleado->mostrar();
 
 
 
