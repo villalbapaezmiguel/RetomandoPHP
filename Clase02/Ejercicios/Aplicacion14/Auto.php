@@ -1,51 +1,51 @@
 <?php
 class Auto{
-    private string $_color;
-    private Double $_precio;
-    private String $_marca;
-    private DateTime $_fecha;
+    private $_color;
+    private $_precio;
+    private $_marca;
+    private $_fecha; //el ? es porque permite un null en ese dato
 
     public function __construct($_marca , $_color , $_precio = 0 , $_fecha = null)
     {
         
-        $this->$_marca = $_marca;
-        $this->$_color = $_color;
-        $this->$_precio = $_precio;
-        $this->$_fecha = $_fecha;
+        $this->_marca = $_marca;
+        $this->_color = $_color;
+        $this->_precio = $_precio;
+        $this->_fecha = $_fecha;
 
     }
 
 
     public function getMarca()
     {
-        $marca = $this->$_marca;
+        $marca = $this->_marca;
         return $marca;
     }
 
     
     public function getColor()
     {
-        $color = $this->$_color;
+        $color = $this->_color;
         return $color;
     }
 
     
     public function getFecha()
     {
-        $fecha = $this->$_fecha;
+        $fecha = $this->_fecha;
         return $fecha;
     }
 
     public function getPrecio()
     {
-        $precio = $this->$_precio;
+        $precio = $this->_precio;
         return $precio;
     }
 
     public function setFecha($nuevaFecha)
     {
-        $this->$_fecha = $nuevaFecha;
-        if($this->$_fecha == $nuevaFecha)
+        $this->_fecha = $nuevaFecha;
+        if($this->_fecha == $nuevaFecha)
         {
             return 1;
         }else{
@@ -55,8 +55,8 @@ class Auto{
     
     public function setColor($nuevo)
     {
-        $this->$_color = $nuevo;
-        if(strcmp($this->$_color , $nuevo) === 0)
+        $this->_color = $nuevo;
+        if(strcmp($this->_color , $nuevo) === 0)
         {
             return 1;
         }else{
@@ -94,9 +94,8 @@ class Auto{
     }
     //Realizar un método de clase llamado “MostrarAuto”, que recibirá un objeto de tipo “Auto”
     //por parámetro y que mostrará todos los atributos de dicho objeto.
-    public static function MostrarAuto($objeto)
+    public static function MostrarAuto(Auto $objeto)
     {
-        $objeto->setMarca($this->getMarca());
 
         $mensaje = "Marca : " . $objeto->getMarca() . "<br/>" . "Color :" . $objeto->getColor() . "<br/>" 
         . "Fecha : ". $objeto->getFecha() . "<br/>" . "Precio :". $objeto->getPrecio() . "<br/>" ;
